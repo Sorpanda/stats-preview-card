@@ -1,0 +1,153 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+img{
+    display: block;
+}
+
+:root{
+    --main-background: hsl(233, 47%, 7%);
+    --card-background: hsl(244, 38%, 16%);
+    --primary-color: hsl(277, 64%, 61%);
+
+    --title-and-stats: hsl(0, 0%, 100%);
+    --main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --stat-headings: hsla(0, 0%, 100%, 0.6);
+
+    --ff-inter: 'Inter', sans-serif;
+    --ff-Lexend: 'Lexend Deca', sans-serif;
+
+    --fw-inter-400: 400;
+    --fw-inter-700: 700;
+}
+
+body{
+    font-family: var(--ff-inter);
+    font-size: 1.5rem;
+    background-color: var(--main-background);  
+    margin: 15em 5em;  
+}
+ 
+.card{
+    background-color: var(--card-background);
+    margin: 0 auto;
+    max-width: 1000px;
+    border-radius: .5em;
+    display: flex;
+    overflow: hidden;
+}
+
+.text-stats-container{
+ padding: 3em;
+ width: 55%;
+
+}
+
+.text{
+    width: 90%;
+}
+
+.text__title{
+    color: var(--title-and-stats);
+    font-size: 3rem;
+}
+
+.primary-color{
+    color: var(--primary-color);
+}
+
+.text__paragraph{
+    color: var(--main-paragraph);
+    padding-top: 2em;
+    line-height: 1.5em;
+}
+
+.stats{
+    width: 80%;
+    color: var(--stat-headings);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    line-height: 2em;
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    padding-top: 4em;
+}
+
+.stats__numbers{
+    font-size: 2rem;
+    font-weight: var(--fw-inter-700);
+    color: var(--title-and-stats);
+    display: block;
+    
+}
+
+.image{
+    width: 45%;
+    background-color: hsl(277, 64%, 65%);
+    background-image: url(./images/image-header-desktop.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    filter: brightness(100%);
+}
+
+.attribution { 
+    font-size: 13px; 
+    text-align: center;
+    color: var(--main-paragraph);
+    margin-top: 2em;
+}
+.attribution a { 
+    color: var(--primary-color); 
+}
+
+@media (max-width:700px){
+
+    body{
+        margin: 1.5em;
+    }
+    
+    .card{
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0 auto; 
+    }
+
+    .text-stats-container{
+        width: 100%;
+        text-align: center;
+    }
+    .text__title{
+        font-size: 2.5rem;
+    }
+
+    .text{
+        width: 100%;
+    }
+
+    .stats{
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5em;
+    margin: 0 auto;
+    
+    }
+
+    .image{
+        background-image: url(./images/image-header-mobile.jpg);
+        background-color: hsl(277, 64%, 61%);
+        background-blend-mode: multiply;
+        background-size:cover;
+        width: 100%;
+        height: 30vh
+    }
+}
