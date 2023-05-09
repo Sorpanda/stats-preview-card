@@ -34,7 +34,9 @@ body{
     font-family: var(--ff-inter);
     font-size: 1.5rem;
     background-color: var(--main-background);  
-    margin: 15em 5em;  
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
 }
  
 .card{
